@@ -5,7 +5,7 @@ class StaticPagesControllerTest < ActionController::TestCase
     get :home
     assert_response :success
     # 3.4.1-2 renamed ~/rails/blog/app/views/layouts/application.html.erb to ~/rails/blog/layout_file
-    assert_select "title", "Home | Ruby on Rails Tutorial Sample App"
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
 
   test "should get help" do
