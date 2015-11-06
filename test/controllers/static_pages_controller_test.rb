@@ -21,4 +21,10 @@ class StaticPagesControllerTest < ActionController::TestCase
     # 3.4.1-2 renamed ~/rails/blog/app/views/layouts/application.html.erb to ~/rails/blog/layout_file
     assert_select "title", "About | Ruby on Rails Tutorial Sample App"
   end
+
+  test "should get contact" do
+    get :contact
+    assert_response :success
+    assert_select "title", "Contact | Ruby on Rails Tutorial Sample App"
+  end    
 end
